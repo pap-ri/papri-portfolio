@@ -485,6 +485,101 @@
       font-size:13px;
       display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
     }
+    /* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
+
+/* Make overall spacing better on mobile */
+@media (max-width: 900px){
+  .wrap{ padding: 0 14px; }
+  .hero{ padding: 44px 0 20px; }
+}
+
+/* NAVBAR: keep buttons inside + wrap nicely */
+@media (max-width: 900px){
+  .nav-inner{
+    gap:10px;
+  }
+  .cta{
+    width:100%;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  }
+  .btn{
+    padding:10px 12px;
+    border-radius:12px;
+    font-size:13px;
+  }
+}
+
+/* HERO: buttons full width nicely */
+@media (max-width: 600px){
+  .cta{
+    gap:10px;
+  }
+  .hero .cta .btn{
+    width:100%;
+    justify-content:center;
+  }
+  .highlights{
+    gap:8px;
+  }
+  .chip{
+    font-size:12px;
+    padding:7px 10px;
+  }
+}
+
+/* PHOTO CARD: shorter height on small mobile */
+@media (max-width: 600px){
+  .photo{
+    height: 320px;
+  }
+}
+
+/* PROJECTS GRID: 1 column on mobile */
+@media (max-width: 900px){
+  .projects-grid{
+    grid-template-columns: 1fr;
+    gap:16px;
+  }
+  .project-card{
+    grid-column: auto;
+  }
+}
+
+/* Project preview area: better height on mobile */
+@media (max-width: 600px){
+  .preview{
+    height: 220px;
+  }
+  .project-body h3{
+    font-size:18px;
+  }
+  .project-body p{
+    font-size:13.5px;
+  }
+}
+
+/* FIX: make heart image always fully visible */
+.shot img{
+  object-fit: contain !important;
+}
+
+/* Skills/contact grids stack nicely */
+@media (max-width: 900px){
+  .grid-3{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer alignment */
+@media (max-width: 600px){
+  .footer{
+    flex-direction:column;
+    gap:6px;
+  }
+}
   </style>
 </head>
 
